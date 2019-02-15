@@ -4,7 +4,9 @@
 source "$BIN_DIR/utils"
 
 if [ ! "$SKIP_PIP_INSTALL" ]; then
-
+    # Update pip before attempting install
+    pip install --upgrade pip
+    
     # Install dependencies with Pip.
     puts-step "Installing requirements with pip"
 
