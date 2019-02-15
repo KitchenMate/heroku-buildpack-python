@@ -79,8 +79,6 @@ if [ ! "$SKIP_PIPENV_INSTALL" ]; then
             puts-step "Installing test dependencies…"
             /app/.heroku/python/bin/pipenv install --dev --system --deploy 2>&1 | cleanup | indent
         fi
-        
-        /app/.heroku/python/bin/pip install --upgrade pip
     fi
 else
     export SKIP_PIP_INSTALL=1
