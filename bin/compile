@@ -369,6 +369,8 @@ cp "$ROOT_DIR/vendor/python.gunicorn.sh" "$GUNICORN_PROFILE_PATH"
 # shellcheck source=bin/steps/hooks/post_compile
 source "$BIN_DIR/steps/hooks/post_compile"
 
+/app/.heroku/python/bin/pip install --upgrade pip
+
 # Fix egg-links, again.
 # shellcheck source=bin/steps/eggpath-fix2
 source "$BIN_DIR/steps/eggpath-fix2"
